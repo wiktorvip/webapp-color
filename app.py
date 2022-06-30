@@ -18,14 +18,15 @@ color_codes = {
 
 SUPPORTED_COLORS = ",".join(color_codes.keys())
 
-with open('VERSION.txt', 'r') as file:
+with open('VERSION', 'r') as file:
     VERSION = file.read().replace('\n', '')
-
+#VERSION = "0.0.1"
+    
 # Get color from Environment variable
 COLOR_FROM_ENV = os.environ.get('APP_COLOR')
 # Generate a random color
 COLOR = random.choice(["red", "green", "blue", "blue2", "darkblue", "pink"])
-#VERSION = "0.0.1"
+
 
 @app.route("/")
 def main():
